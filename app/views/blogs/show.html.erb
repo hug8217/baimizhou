@@ -22,7 +22,8 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @blog.URL %>
+  <%= image_tag(@blog.URL_url,:width=>600)if @blog.URL.present?
+  %>
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
