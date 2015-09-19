@@ -1,0 +1,33 @@
+<%= form_for(@jianba) do |f| %>
+  <% if @jianba.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jianba.errors.count, "error") %> prohibited this jianba from being saved:</h2>
+
+      <ul>
+      <% @jianba.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

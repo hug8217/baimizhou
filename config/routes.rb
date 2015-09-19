@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root :to => redirect('/blogs')
+  get 'homepage/index'
+
+  resources :jianbas
+  get 'pages/info'
+
+  root 'homepage#index'
   resources :blogs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

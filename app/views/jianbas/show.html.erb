@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @jianba.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @jianba.author %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @jianba.date %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @jianba.link %>
+</p>
+
+<%= link_to 'Edit', edit_jianba_path(@jianba) %> |
+<%= link_to 'Back', jianbas_path %>

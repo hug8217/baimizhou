@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Jianbas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jianbas.each do |jianba| %>
+      <tr>
+        <td><%= jianba.title %></td>
+        <td><%= jianba.author %></td>
+        <td><%= jianba.date %></td>
+        <td><%= jianba.link %></td>
+        <td><%= link_to 'Show', jianba %></td>
+        <td><%= link_to 'Edit', edit_jianba_path(jianba) %></td>
+        <td><%= link_to 'Destroy', jianba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jianba', new_jianba_path %>
