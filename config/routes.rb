@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'homepage/index'
-
   resources :jianbas
   get 'pages/info'
 
