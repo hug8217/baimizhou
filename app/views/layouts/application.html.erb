@@ -8,18 +8,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner"> 
-		<div class="container">
-			<a class="brand" href="/">白米粥</a>
-			<ul class="nav">
-				<li class="active"><a href="/blogs">博客</a></li>
-			</ul>
+<div class="navbar navbar-default">
+	<div class="container-fluid"> 
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">白米粥</a>
 		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="/blogs">博客</a></li>
+		</ul>
 	</div>
 </div>
 <div class="container">
 <%= yield %>
 </div>
+<footer>
+	<div class="container">
+		白米粥 2015
+	</div>
+</footer>
 </body>
 </html>
