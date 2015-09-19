@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Baimizhou</title>
+  <title>白米粥</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner"> 
+		<div class="container">
+			<a class="brand" href="/">白米粥</a>
+			<ul class="nav">
+				<li class="active"><a href="/blogs">博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
 <%= yield %>
-
+</div>
 </body>
 </html>
